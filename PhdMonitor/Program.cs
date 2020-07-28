@@ -52,7 +52,7 @@ namespace PHD2Client
                                state, avgDist);
 
                         Thread.Sleep(2000);
-                        if (state == "LostLock" || state == "Stopped")
+                        if (state == "LostLock")
                         {
                             guider.StopCapture();
                             Thread.Sleep(5000);
