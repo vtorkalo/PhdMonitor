@@ -54,10 +54,9 @@ namespace PHD2Client
                         Thread.Sleep(2000);
                         if (state == "LostLock")
                         {
-                            guider.StopCapture();
-                            Thread.Sleep(5000);
                             guider.Guide(settlePixels, settleTime, settleTimeout);
                             WaitForSettleDone(guider);
+                            Thread.Sleep(5000);
                         }
                     }
                 }
